@@ -1,1118 +1,247 @@
-<div align="center">
+# 🚀 JARVIS AI – Intelligent Voice Assistant System
 
-# Jarvis AI Assistant
-
-### *Your Personal Voice-Controlled AI Companion*
-
-[![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
-[![Stars](https://img.shields.io/github/stars/vannu07/jarvis?style=for-the-badge&logo=github)](https://github.com/vannu07/jarvis/stargazers)
-[![Forks](https://img.shields.io/github/forks/vannu07/jarvis?style=for-the-badge&logo=github)](https://github.com/vannu07/jarvis/network)
-[![CodeQL](https://github.com/vannu07/jarvis/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vannu07/jarvis/actions/workflows/codeql-analysis.yml)
-
-<img src="https://raw.githubusercontent.com/vannu07/jarvis/main/frontend/assets/img/logo.ico" alt="Jarvis Logo" width="150"/>
-
-*A production-ready voice assistant with facial recognition authentication, built on modern Python architecture and web technologies.*
-
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#development) • [Contributing](#contributing)
+### 🎯 Personal AI Assistant with Voice, Vision & Smart Automation
 
 ---
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+## 📌 Introduction
 
-</div>
+JARVIS AI is a smart, voice-controlled assistant designed to simplify daily tasks using modern technologies like **speech recognition, AI processing, and computer vision**. It combines automation with intelligent interaction to create a seamless human-computer experience.
 
-## Overview
-
-Jarvis is an intelligent voice assistant that combines speech recognition, natural language processing, and computer vision to provide a seamless user experience. The system features biometric authentication, hotword detection, and extensive integration with popular platforms.
-
-<div align="center">
-
-## Key Features
-
-| Voice Control | Face Recognition | Hotword Detection | Web Integration |
-|:---:|:---:|:---:|:---:|
-| Advanced speech-to-text | Secure biometric auth | Always-on wake word | Modern responsive UI |
-
-</div>
-
-### Core Capabilities
-
-<table>
-<tr>
-<td width="50%">
-
-**Voice & AI**
-- Real-time Speech Recognition using Google STT
-- Natural Language Processing with Hugging Face
-- Text-to-Speech with customizable voices
-- Audio Visualization in real-time
-- Wake Word Detection ("Jarvis", "Alexa")
-
-</td>
-<td width="50%">
-
-**Smart Integrations**
-- WhatsApp Automation (messages, calls, video)
-- YouTube Control via voice commands
-- System Control (apps, windows, shortcuts)
-- Contact Management with voice lookup
-- Web Browsing through voice
-- Weather Forecasts via OpenWeatherMap API
-
-</td>
-</tr>
-</table>
+This system is capable of understanding voice commands, recognizing users through facial authentication, and performing real-world actions like opening apps, sending messages, and fetching live data.
 
 ---
 
-<div align="center">
+## ✨ Key Features
 
-## Technology Stack
+### 🎤 Voice & AI Capabilities
 
-### Backend Technologies
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+* Real-time Speech-to-Text conversion
+* AI-based Natural Language Understanding
+* Text-to-Speech responses with customizable voice
+* Wake word activation (e.g., "Jarvis")
+* Live audio visualization
 
-### Frontend Technologies
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+### 👁️ Face Recognition & Security
 
-### AI & ML
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+* User authentication using webcam
+* Secure biometric verification
+* Configurable confidence levels
 
-### Tools & Libraries
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+### 🌐 Smart Automation
 
-</div>
+* Open applications via voice
+* Control system operations
+* Automate web browsing
+* WhatsApp messaging & calling
+* YouTube voice control
 
----
+### ☁️ Live Data Integration
 
-<div align="center">
-
-## System Architecture
-
-```mermaid
-graph TD
-    A[Web Frontend] -->|Eel Bridge| B[Main Process]
-    B --> C[Speech Recognition]
-    B --> D[Face Authentication]
-    B --> E[Hotword Detection]
-    C --> F[Command Parser]
-    F --> G[Feature Handlers]
-    G --> H[SQLite Database]
-    G --> I[WhatsApp Integration]
-    G --> J[YouTube Control]
-    G --> K[AI Chatbot]
-
-    %% Consistent style for all nodes
-    style A fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style B fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style C fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style D fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style E fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style F fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style G fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style H fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style I fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style J fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-    style K fill:#ede7f6,stroke:#4a148c,stroke-width:1px,color:#212121
-
-```
-
-</div>
+* Weather updates using API
+* News and information retrieval
+* Dynamic responses using AI models
 
 ---
 
-## Prerequisites
+## 🏗️ System Architecture
 
-<table>
-<tr>
-<td width="50%">
-
-### System Requirements
-```yaml
-OS: Windows 10/11, Linux, macOS
-Python: 3.10+
-RAM: 4GB minimum
-Storage: 500MB free space
-```
-
-</td>
-<td width="50%">
-
-### Hardware
-```yaml
-Microphone: Required for voice input
-Webcam: Required for face recognition
-Internet: Active connection needed
-Audio Output: Speakers/Headphones
-```
-
-</td>
-</tr>
-</table>
+* Frontend (HTML, CSS, JS) → User Interface
+* Backend (Python) → Core Processing
+* AI Modules → NLP + Speech Recognition
+* Computer Vision → Face Detection & Recognition
+* Database (SQLite) → Storage & Management
 
 ---
 
-## Installation
+## 🛠️ Technology Stack
 
-### Step 1: Clone Repository
+### Backend
+
+* Python
+* OpenCV
+* SQLite
+* NumPy
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+
+### AI / ML
+
+* Hugging Face Models
+* TensorFlow
+
+---
+
+## ⚙️ Installation Guide
+
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/vannu07/jarvis.git
-cd jarvis
+git clone https://github.com/your-username/jarvis-ai.git
+cd jarvis-ai
 ```
 
-### Step 2: Setup Virtual Environment
+### 2. Create Virtual Environment
 
-<table>
-<tr>
-<td width="50%">
-
-**Windows**
 ```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate   # Windows
 ```
 
-</td>
-<td width="50%">
-
-**Linux/Mac**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-</td>
-</tr>
-</table>
-
-### Step 3: Install Dependencies
+### 3. Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Configure Environment
+### 4. Setup Environment Variables
 
-Create a `.env` file:
+Create `.env` file:
 
 ```env
-# API Keys
-HUGGINGFACE_TOKEN=your_token_here
-PORCUPINE_ACCESS_KEY=your_key_here
-NEWSAPI_KEY=your_newsapi_key
-OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
-
-# Voice Settings
-TTS_RATE=150
-TTS_VOICE=0
-
-# Recognition Settings
-FACE_CONFIDENCE_THRESHOLD=50
-HOTWORD_SENSITIVITY=0.5
+HUGGINGFACE_TOKEN=your_token
+OPENWEATHER_API_KEY=your_key
+FACE_CONFIDENCE=50
 ```
 
-### Step 5: Train Face Recognition (Optional)
-
-```bash
-python backend/auth/trainer.py
-```
-
-<div align="center">
-
-### Quick Start
+### 5. Run Project
 
 ```bash
 python run.py
 ```
 
-**Jarvis will launch at** `http://localhost:8000`
-
-</div>
-
 ---
 
-## Usage
+## 🎯 Usage Examples
 
 ### Voice Commands
 
-<table>
-<tr>
-<td width="33%">
+**System Control**
 
-#### System Control
-```
-Jarvis, open Chrome
-Jarvis, launch VS Code
-Jarvis, close window
-Jarvis, shutdown computer
-```
+* "Open Chrome"
+* "Shutdown system"
 
-</td>
-<td width="33%">
+**Media**
 
-#### Media Control
-```
-Jarvis, play Metallica
-Jarvis, pause video
-Jarvis, next song
-Jarvis, volume up
-```
+* "Play music"
+* "Pause video"
 
-</td>
-<td width="33%">
+**Communication**
 
-#### Communication
-```
-Jarvis, message John
-Jarvis, call Sarah
-Jarvis, video call Mike
-Jarvis, open WhatsApp
-```
+* "Send message on WhatsApp"
+* "Call contact"
 
-</td>
-</tr>
-<tr>
-<td width="33%">
+**Information**
 
-#### Weather & Information
-```
-Jarvis, weather in London
-Jarvis, forecast for Tokyo
-Jarvis, weather in New York
-Jarvis, forecast Paris
-```
-
-</td>
-<td width="66%" colspan="2">
-
-#### AI Assistant
-```
-Jarvis, what is the capital of France?
-Jarvis, tell me a joke
-Jarvis, help me with Python
-```
-
-</td>
-</tr>
-</table>
-
-### Keyboard Shortcuts
-
-<div align="center">
-
-| Shortcut | Action |
-|:--------:|:------:|
-| `Win + J` (Windows) | Manual Activation |
-| `Cmd + J` (macOS) | Manual Activation |
-| `Ctrl + Q` | Quit Application |
-| `F11` | Fullscreen Toggle |
-
-</div>
-
-### Wake Words
-
-Say **"Jarvis"** or **"Alexa"** followed by your command
+* "What is the weather today?"
+* "Tell me a joke"
 
 ---
 
-## Weather Feature
-
-Jarvis integrates with OpenWeatherMap API to provide real-time weather updates and forecasts.
-
-### Setup OpenWeatherMap API
-
-1. Sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api)
-2. Add your API key to the `.env` file:
-   ```env
-   OPENWEATHERMAP_API_KEY=your_api_key_here
-   ```
-
-### Weather Commands
-
-**Current Weather:**
-```bash
-Jarvis, weather in London
-Jarvis, what's the weather in Tokyo
-Jarvis, weather for New York
-```
-
-**Weather Forecast (3-5 days):**
-```bash
-Jarvis, forecast for Paris
-Jarvis, forecast in Mumbai
-Jarvis, weather forecast for Berlin
-```
-
-### Features
-
-- ✅ Current temperature, feels-like temperature, and conditions
-- ✅ Humidity, wind speed, and atmospheric pressure
-- ✅ 3-5 day weather forecast with daily min/max temperatures
-- ✅ Graceful handling of invalid city names
-- ✅ Clean console output with detailed information
-- ✅ Voice responses for hands-free operation
-
-### Standalone Usage
-
-You can also use the weather module independently:
-
-```bash
-python weather_fetcher.py
-```
-
-Then use commands like:
-- `weather London` - Get current weather
-- `forecast Tokyo` - Get 5-day forecast
-- `exit` - Quit the application
-
-### Testing
-
-Run the weather module tests:
-
-```bash
-python -m testing.weather_test
-```
-
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```
-jarvis/
+jarvis-ai/
+│
 ├── backend/
 │   ├── auth/
-│   │   ├── haarcascade_frontalface_default.xml
-│   │   ├── recognize.py        # Face recognition
-│   │   ├── trainer.py          # Model training
-│   │   └── trainer/            # Trained models
-│   ├── command.py              # Command parser
-│   ├── config.py               # Configuration
-│   ├── db.py                   # Database ops
-│   ├── feature.py              # Feature handlers
-│   └── helper.py               # Utilities
+│   ├── command.py
+│   ├── feature.py
+│   └── db.py
+│
 ├── frontend/
-│   ├── assets/
-│   │   ├── audio/              # Sound files
-│   │   ├── img/                # Images & icons
-│   │   └── vendor/             # Third-party libs
-│   ├── index.html              # Main UI
-│   ├── style.css               # Styles
-│   ├── script.js               # Particle effects
-│   ├── main.js                 # Core logic
-│   └── controller.js           # Event handlers
-├── main.py                     # Entry point
-├── run.py                      # Launcher
-├── weather_fetcher.py          # Weather module
-├── requirements.txt            # Dependencies
-├── testing/
-│   ├── weather_test.py         # Weather tests
-│   └── text_test.py            # Command parser tests
-└── jarvis.db                  # SQLite DB
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── run.py
+├── requirements.txt
+└── database.db
 ```
 
 ---
 
-## Development
+## 📊 Performance Highlights
 
-### Adding Custom Commands
-
-**1. Define Command Pattern**
-
-Edit `backend/command.py`:
-
-```python
-def parse_command(query: str) -> dict:
-    if "my custom action" in query.lower():
-        return {
-            "action": "custom_action",
-            "params": {"param1": "value1"}
-        }
-```
-
-**2. Implement Handler**
-
-Edit `backend/feature.py`:
-
-```python
-def handle_custom_action(params: dict) -> str:
-    result = do_something(params)
-    return f"Action completed: {result}"
-```
-
-**3. Register Command**
-
-```python
-COMMAND_HANDLERS = {
-    "custom_action": handle_custom_action,
-    # ... other handlers
-}
-```
-
-### Database Schema
-
-```sql
--- Contacts Table
-CREATE TABLE contacts (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    phone TEXT,
-    whatsapp TEXT,
-    email TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Applications Table
-CREATE TABLE apps (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    path TEXT NOT NULL,
-    keywords TEXT,
-    icon TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Web Commands Table
-CREATE TABLE web_commands (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    command TEXT NOT NULL,
-    url TEXT NOT NULL,
-    description TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-### Testing
-
-```bash
-# Run all tests
-pytest tests/ -v
-
-# Run with coverage
-pytest --cov=backend --cov-report=html tests/
-
-# Run specific test file
-pytest tests/test_command.py -v
-
-# Linting
-black backend/ frontend/ --check
-flake8 backend/
-pylint backend/
-```
-
-### Docker Deployment
-
-```dockerfile
-FROM python:3.10-slim
-
-WORKDIR /app
-
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    portaudio19-dev \
-    python3-pyaudio \
-    libopencv-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy and install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application
-COPY . .
-
-EXPOSE 8000
-
-CMD ["python", "run.py"]
-```
-
-**Build & Run:**
-```bash
-docker build -t jarvis-ai .
-docker run -p 8000:8000 -v $(pwd)/jarvis.db:/app/jarvis.db jarvis-ai
-```
+* ⚡ Fast response time (<200ms)
+* 🎯 High face recognition accuracy (~94%)
+* 💾 Low memory usage (~150MB)
+* 🔋 Optimized CPU usage
 
 ---
-
-<div align="center">
-
-## Performance Metrics
-
-| Metric | Value | Status |
-|:------:|:-----:|:------:|
-| Cold Start Time | ~3.5s | ![](https://img.shields.io/badge/-Excellent-brightgreen) |
-| Response Latency | <200ms | ![](https://img.shields.io/badge/-Fast-green) |
-| Face Recognition Accuracy | 94.2% | ![](https://img.shields.io/badge/-High-blue) |
-| Memory Footprint | ~150MB | ![](https://img.shields.io/badge/-Efficient-green) |
-| CPU Usage (Idle) | 2-5% | ![](https://img.shields.io/badge/-Low-brightgreen) |
-
-*Benchmarked on Windows 11, Intel i5-10400, 16GB RAM*
-
-</div>
-
----
-
-## Troubleshooting
-
-### PyAudio Installation Fails
-
-**Windows:**
-```bash
-pip install pipwin
-pipwin install pyaudio
-```
-
-**Linux:**
-```bash
-sudo apt-get install portaudio19-dev python3-pyaudio
-pip install pyaudio
-```
-
-**macOS:**
-```bash
-brew install portaudio
-pip install pyaudio
-```
-
-### Face Recognition Not Working
-
-1. Ensure good lighting conditions
-2. Position face 2-3 feet from camera
-3. Retrain model:
-   ```bash
-   python backend/auth/trainer.py
-   ```
-4. Check camera permissions in system settings
-
-### Voice Commands Unresponsive
-
-1. Check microphone permissions
-2. Test microphone:
-   ```bash
-   python -m speech_recognition
-   ```
-3. Verify internet connection
-4. Try different microphone device
-
-### Module Import Errors
-
-```bash
-pip install --upgrade --force-reinstall -r requirements.txt
-```
-
-### Enable Debug Mode
-
-```bash
-# Windows
-set JARVIS_DEBUG=1
-python run.py
-
-# Linux/Mac
-export JARVIS_DEBUG=1
-python run.py
-```
-
----
-
-<div align="center">
-
-## Contributing
-
-**We welcome contributions from the community**
-
-</div>
-
-### Contribution Guidelines
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Commit Convention
-
-```
-type(scope): subject
-
-[optional body]
-
-[optional footer]
-```
-
-**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
-
-**Example:**
-```bash
-git commit -m "feat(voice): add support for multiple languages"
-git commit -m "fix(face): improve recognition accuracy in low light"
-git commit -m "docs(readme): update installation instructions"
-```
-
-### Code Style
-
-- Follow PEP 8 for Python code
-- Use type hints where applicable
-- Write docstrings for public functions
-- Run `black` and `flake8` before committing
-- Add unit tests for new features
-
-<div align="center">
-
-### Top Contributors
-
-<a href="https://github.com/vannu07/jarvis/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=vannu07/jarvis" />
-</a>
-
-</div>
-
----
-
-## Roadmap
-
-<table>
-<tr>
-<td width="33%">
-
-### Short Term
-- [ ] Multi-language support
-- [ ] Mobile companion app
-- [ ] Theme customization
-- [ ] Plugin system
-
-</td>
-<td width="33%">
-
-### Medium Term
-- [ ] Cloud synchronization
-- [ ] Home automation
-- [ ] Voice training
-- [ ] Analytics dashboard
-
-</td>
-<td width="33%">
-
-### Long Term
-- [ ] Advanced AI models
-- [ ] Cross-platform support
-- [ ] Multi-user profiles
-- [ ] End-to-end encryption
-
-</td>
-</tr>
-</table>
-
----
-
-<div align="center">
-
-## License
-
-This project is licensed under the **MIT License**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-See [LICENSE](LICENSE) file for details
-
-</div>
-
----
-
-<div align="center">
-
-## Acknowledgments
-
-Special thanks to these amazing projects:
-
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
-[![Google](https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://cloud.google.com/speech-to-text)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-
-</div>
-
----
-
-<div align="center">
-
-## Support
-
-**Project Link:** [github.com/vannu07/jarvis](https://github.com/vannu07/jarvis)
-
-For issues, questions, or feature requests, please open an issue on GitHub
-
----
-
-### Show Your Support
-
-If you find this project helpful, please consider starring the repository
-
-[![Star History Chart](https://api.star-history.com/svg?repos=vannu07/jarvis&type=Date)](https://star-history.com/#vannu07/jarvis&Date)
-
-**Made with Python**
-
-![](https://img.shields.io/github/stars/vannu07/jarvis?style=social)
-![](https://img.shields.io/github/forks/vannu07/jarvis?style=social)
-![](https://img.shields.io/github/watchers/vannu07/jarvis?style=social)
-
-**Copyright 2025**
-
-</div>
-
-
-# Jarvis-AI-Assistant-Voice-Controlled-Intelligent-System
-
-# Contributing to Jarvis
-
-Thank you for your interest in contributing to Jarvis! This document provides guidelines and information for contributors.
-
-## 🎃 Hacktoberfest 2025
-
-**Welcome Hacktoberfest contributors!** 🎉
-
-This repository is **Hacktoberfest-friendly** and welcomes contributions from developers of all skill levels. Whether you're a beginner or an expert, there's something for everyone!
-
-### 🏷️ Hacktoberfest Labels
-
-We use specific labels to help you find suitable contributions:
-
-- `hacktoberfest` - All Hacktoberfest-related issues
-- `good first issue` - Perfect for first-time contributors
-- `help wanted` - Issues that need community help
-- `documentation` - Documentation improvements
-- `bug` - Bug fixes
-- `enhancement` - New features
-- `beginner-friendly` - Suitable for beginners
-- `intermediate` - Requires some experience
-- `advanced` - For experienced developers
-
-### 🎯 Hacktoberfest Contribution Ideas
-
-#### For Beginners (Good First Issues)
-- 📝 Fix typos in documentation
-- 🌐 Add translations for different languages
-- 🎨 Improve UI/UX elements
-- 📚 Add examples to documentation
-- 🐛 Fix simple bugs
-- ✨ Add emojis and improve formatting
-
-#### For Intermediate Contributors
-- 🔧 Add new voice commands
-- 📱 Improve mobile responsiveness
-- 🎵 Add new audio features
-- 🔍 Enhance search functionality
-- 📊 Add analytics and monitoring
-- 🧪 Write unit tests
-
-#### For Advanced Contributors
-- 🤖 Integrate new AI models
-- 🔐 Implement advanced security features
-- 📡 Add IoT device integration
-- 🌐 Create API endpoints
-- 🚀 Performance optimizations
-- 🏗️ Architecture improvements
-
-### 🎁 Hacktoberfest Rewards
-
-Contributors who make valid contributions during Hacktoberfest will:
-- ✅ Get their PRs counted towards Hacktoberfest goals
-- 🏆 Receive recognition in our contributors list
-- 📜 Get mentioned in release notes
-- 🎉 Be eligible for Hacktoberfest swag (if applicable)
-
-### 📋 Hacktoberfest Guidelines
-
-1. **Read the Code of Conduct** - Be respectful and inclusive
-2. **Check existing issues** - Avoid duplicate work
-3. **Follow contribution guidelines** - Ensure quality contributions
-4. **Test your changes** - Make sure everything works
-5. **Be patient** - Maintainers will review your PRs
-
-### 🚀 Quick Start for Hacktoberfest
-
-1. **Fork** this repository
-2. **Star** the repository (helps with visibility)
-3. **Look for issues** with `hacktoberfest` or `good first issue` labels
-4. **Comment** on the issue to claim it
-5. **Create a branch** and make your changes
-6. **Submit a PR** with a clear description
-7. **Wait for review** and address feedback
-
-### 💡 Hacktoberfest Project Ideas
-
-Here are some specific project ideas for Hacktoberfest:
-
-#### 🎤 Voice Features
-- Add voice command for weather
-- Implement voice-controlled music
-- Add voice notes functionality
-- Create voice reminders
-
-#### 🎨 UI/UX Improvements
-- Add dark mode toggle
-- Improve mobile interface
-- Add custom themes
-- Enhance animations
-
-#### 🔧 New Integrations
-- Add Slack integration
-- Implement Discord bot
-- Add Telegram support
-- Create Twitter integration
-
-#### 📱 Mobile Features
-- Create PWA version
-- Add mobile-specific commands
-- Implement push notifications
-- Add offline functionality
-
-#### 🌐 Web Features
-- Add real-time chat
-- Implement user dashboard
-- Create settings panel
-- Add usage analytics
-
-### 🎯 Contribution Types That Count
-
-For Hacktoberfest, these types of contributions count:
-- ✅ Code contributions (Python, JavaScript, HTML, CSS)
-- ✅ Documentation improvements
-- ✅ Bug fixes
-- ✅ Feature additions
-- ✅ Translation updates
-- ✅ UI/UX improvements
-- ✅ Test additions
-- ✅ Configuration improvements
-
-### 🚫 What Doesn't Count
-
-These contributions don't count for Hacktoberfest:
-- ❌ Spam or low-quality contributions
-- ❌ Duplicate PRs
-- ❌ PRs that don't follow guidelines
-- ❌ PRs without proper description
-- ❌ PRs that break existing functionality
-
-### 📞 Need Help?
-
-- 💬 **Discord**: Join our community server
-- 📧 **Email**: Contact maintainers
-- 🐛 **Issues**: Create an issue for questions
-- 📖 **Documentation**: Check our comprehensive docs
-
-### 🎉 Thank You!
-
-Thank you for contributing to Jarvis during Hacktoberfest! Your contributions help make this project better for everyone.
-
----
-
-**Happy Hacking!** 🎃✨
-
-## 🤝 How to Contribute
-
-### Reporting Bugs
-- Use the GitHub issue tracker
-- Provide detailed steps to reproduce the bug
-- Include system information (OS, Python version, etc.)
-- Attach relevant logs or error messages
-
-### Suggesting Features
-- Open a new issue with the "enhancement" label
-- Describe the feature in detail
-- Explain how it would benefit users
-- Consider implementation complexity
-
-### Code Contributions
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Make** your changes
-4. **Test** thoroughly
-5. **Commit** with clear messages
-6. **Push** to your fork
-7. **Open** a Pull Request
-
-## 📝 Code Standards
-
-## Code Formatting
-
-This project uses the [Black](https://github.com/psf/black) code formatter to ensure a consistent code style. All pull requests will be checked for formatting by a GitHub Action.
-
-### Running Black Locally
-
-Before submitting a pull request, please format your code using Black. You can do this by running the following command in your terminal:
-
-```bash
-pip install black
-black .
-```
-
-### Python Code
-- Follow PEP 8 style guidelines
-- **All Python code is automatically formatted using Black. Pull requests will be checked, and a commit will be added to automatically fix any formatting issues.**
-- Use meaningful variable and function names
-- Add docstrings for functions and classes
-- Keep functions focused and small
-- Add type hints where appropriate
-
-### JavaScript Code
-- Use consistent indentation (2 spaces)
-- Follow ES6+ standards
-- Add comments for complex logic
-- Use meaningful variable names
-
-### HTML/CSS
-- Use semantic HTML
-- Follow responsive design principles
-- Use consistent naming conventions
-- Optimize for performance
 
 ## 🧪 Testing
 
-### Before Submitting
-- Test your changes thoroughly
-- Ensure no existing functionality is broken
-- Test on different operating systems if possible
-- Verify voice recognition works correctly
-- Test face recognition functionality
+Run tests using:
 
-### Test Cases
-- Voice command recognition
-- Face authentication
-- Web interface responsiveness
-- Audio playback
-- Database operations
-
-## 📚 Documentation
-
-### Code Documentation
-- Add docstrings to new functions
-- Update README.md if adding new features
-- Include usage examples
-- Document any new dependencies
-
-### Commit Messages
-Use clear, descriptive commit messages:
-- `feat: add new voice command for weather`
-- `fix: resolve microphone permission issue`
-- `docs: update installation instructions`
-- `refactor: improve face recognition accuracy`
-
-## 🚀 Pull Request Process
-
-### Before Submitting
-1. Ensure your code follows the style guidelines
-2. Test all functionality thoroughly
-3. Update documentation as needed
-4. Rebase on the latest main branch
-
-### Pull Request Template
-```markdown
-## Description
-Brief description of changes
-
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Breaking change
-- [ ] Documentation update
-
-## Testing
-- [ ] Tested voice commands
-- [ ] Tested face recognition
-- [ ] Tested web interface
-- [ ] No existing functionality broken
-
-## Screenshots (if applicable)
-Add screenshots for UI changes
-
-## Additional Notes
-Any additional information for reviewers
+```bash
+pytest
 ```
 
-## 🏷️ Issue Labels
+---
 
-- `bug`: Something isn't working
-- `enhancement`: New feature or request
-- `documentation`: Improvements to documentation
-- `good first issue`: Good for newcomers
-- `help wanted`: Extra attention is needed
-- `question`: Further information is requested
+## 🐞 Troubleshooting
 
-## 💡 Development Setup
+### Microphone Not Working
 
-### Prerequisites
-- Python 3.10+
-- Git
-- Virtual environment
+* Check system permissions
+* Ensure correct device selected
 
-### Setup Steps
-1. Fork and clone the repository
-2. Create virtual environment
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the application: `python run.py`
-5. Test functionality
+### Face Detection Issue
 
-## 📞 Getting Help
+* Use proper lighting
+* Retrain model if needed
 
-- Open an issue for questions
-- Check existing issues and discussions
-- Review the README.md for setup instructions
-- Contact maintainers for urgent issues
+### Module Errors
 
-## 🎯 Areas for Contribution
+```bash
+pip install -r requirements.txt --upgrade
+```
 
-### High Priority
-- Voice command improvements
-- Face recognition accuracy
-- UI/UX enhancements
-- Performance optimizations
+---
 
-### Medium Priority
-- Additional integrations
-- Mobile app development
-- Plugin system
-- Advanced AI features
+## 🤝 Contribution Guide
 
-### Low Priority
-- Documentation improvements
-- Code refactoring
-- Test coverage
-- CI/CD setup
+Contributions are welcome!
 
-## 📋 Code of Conduct
+### Steps:
 
-### Our Pledge
-We are committed to providing a welcoming and inclusive environment for all contributors.
+1. Fork the repository
+2. Create a new branch
+3. Make changes
+4. Commit changes
+5. Submit Pull Request
 
-### Expected Behavior
-- Use welcoming and inclusive language
-- Be respectful of differing viewpoints
-- Accept constructive criticism gracefully
-- Focus on what's best for the community
+---
 
-### Unacceptable Behavior
-- Harassment or discrimination
-- Trolling or inflammatory comments
-- Personal attacks
-- Inappropriate or unprofessional conduct
+## 📌 Future Improvements
 
-## 🏆 Recognition
+* Multi-language support
+* Mobile app integration
+* Smart home automation
+* Advanced AI models
 
-Contributors will be recognized in:
-- README.md contributors section
-- Release notes
-- Project documentation
+---
 
-Thank you for contributing to Jarvis! 🚀
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* Star ⭐ the repository
+* Share with others
+* Contribute to improve
+
+---
+
+### 💡 Developed with Passion using Python & AI

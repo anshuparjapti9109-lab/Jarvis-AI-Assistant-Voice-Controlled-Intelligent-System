@@ -668,15 +668,7 @@ git commit -m "docs(readme): update installation instructions"
 - Run `black` and `flake8` before committing
 - Add unit tests for new features
 
-<div align="center">
 
-### Top Contributors
-
-<a href="https://github.com/vannu07/jarvis/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=vannu07/jarvis" />
-</a>
-
-</div>
 
 ---
 
